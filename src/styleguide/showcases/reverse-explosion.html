@@ -353,12 +353,23 @@
     }
 
     function play() {
+        // Force a style flush so the initial (scattered) state is committed
+        // before we toggle the .is-active class. Without this, on some browsers
+        // the first "cold" load can skip the transition entirely.
         container.classList.remove('is-active');
         prepare();
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        container.offsetHeight;
         requestAnimationFrame(() => requestAnimationFrame(() => container.classList.add('is-active')));
     }
 
-    play();
+    // Run after the full load event so we don't lose the first transition on
+    // hard reloads / cold cache loads.
+    if (document.readyState === 'complete') {
+        play();
+    } else {
+        window.addEventListener('load', play, { once: true });
+    }
     if (replay) replay.addEventListener('click', play);
 })();
 </script>
