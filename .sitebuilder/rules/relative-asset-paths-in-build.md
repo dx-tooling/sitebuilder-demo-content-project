@@ -1,0 +1,1 @@
+Ensure that pages in the final dist build render correctly even when the dist folder is served from a file:// location or a sub-path. In particular, all assets such as CSS and JS must be included via relative paths.
