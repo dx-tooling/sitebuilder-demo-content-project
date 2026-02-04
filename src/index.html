@@ -2,10 +2,10 @@
 <html lang="en" class="h-full scroll-smooth">
 
 <head>
-    <title>SwarmprisifyAI - Java Class-Name Enterprisifier</title>
+    <title>SwarmprisifyAI™ - Java Class-Name Enterprisifier</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SwarmprisifyAI is an AI-powered Java class-name enterprisifier that orchestrates a wholesome-chaotic agent swarm to rename ONE class name and return ONE approved final result.">
+    <meta name="description" content="SwarmprisifyAI™ is an AI-powered Java class-name enterprisifier that orchestrates a wholesome-chaotic agent swarm to rename ONE class name and return ONE approved final result.">
 
     <include src="partials/theme-fouc-guard.html"></include>
 
@@ -23,7 +23,7 @@
 
     <header class="mb-10 flex justify-between items-center">
         <a href="./index.html" class="text-xl font-bold text-gray-900 dark:text-white">
-            SwarmprisifyAI
+            SwarmprisifyAI™
         </a>
 
         <div class="flex items-center gap-3">
@@ -49,21 +49,70 @@
     </header>
 
     <!-- Hero -->
-    <section class="relative mb-16 effects-container" data-controller="hero-effects" style="perspective: 1000px;">
+    <section class="relative mb-16 effects-container" data-controller="hero-effects swarm-hype" style="perspective: 1000px;">
         <div
-            class="relative z-10 py-14 px-6 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-sm
+            class="relative z-10 py-14 px-6 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-sm overflow-hidden
                    transition-transform duration-[3000ms] ease-in-out
                    transform rotate-x-[60deg] origin-top
                    [.effects-active_&]:[transform:scale(1.03)_rotateX(0deg)]"
             style="transform-style: preserve-3d;"
         >
+            <!-- (1) Swarm Burst animated SVG background -->
+            <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-lg">
+                <svg
+                    class="absolute -inset-10 h-[calc(100%+5rem)] w-[calc(100%+5rem)] opacity-60 dark:opacity-50"
+                    viewBox="0 0 1200 520"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                >
+                    <defs>
+                        <radialGradient id="swarmGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 260) rotate(90) scale(260 600)">
+                            <stop stop-color="#7C3AED" stop-opacity="0.22" />
+                            <stop offset="1" stop-color="#2563EB" stop-opacity="0" />
+                        </radialGradient>
+                        <linearGradient id="swarmLine" x1="80" y1="40" x2="1120" y2="480" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2563EB" stop-opacity="0.35" />
+                            <stop offset="1" stop-color="#7C3AED" stop-opacity="0.35" />
+                        </linearGradient>
+                        <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="6" />
+                        </filter>
+                    </defs>
+
+                    <rect x="0" y="0" width="1200" height="520" fill="url(#swarmGlow)" filter="url(#softBlur)" />
+
+                    <g stroke="url(#swarmLine)" stroke-width="2">
+                        <path d="M110 90 C 340 120, 430 210, 600 260" />
+                        <path d="M220 430 C 380 360, 480 320, 600 260" />
+                        <path d="M1010 100 C 850 150, 760 210, 600 260" />
+                        <path d="M1080 430 C 860 380, 720 330, 600 260" />
+                        <path d="M140 250 C 320 250, 430 250, 600 260" />
+                        <path d="M1060 250 C 860 250, 760 250, 600 260" />
+                    </g>
+
+                    <g class="swarm-node" fill="#2563EB" opacity="0.9">
+                        <circle cx="110" cy="90" r="7" />
+                        <circle cx="220" cy="430" r="7" />
+                        <circle cx="1010" cy="100" r="7" />
+                        <circle cx="1080" cy="430" r="7" />
+                        <circle cx="140" cy="250" r="7" />
+                        <circle cx="1060" cy="250" r="7" />
+                    </g>
+
+                    <g class="swarm-core" fill="#7C3AED">
+                        <circle cx="600" cy="260" r="10" />
+                        <circle cx="600" cy="260" r="28" opacity="0.18" />
+                    </g>
+                </svg>
+            </div>
             <div class="text-center">
                 <p class="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-300 mb-3">
-                    AI-powered class-name enterprisifier 7 returns exactly ONE name
+                    AI-powered class-name enterprisifier · returns exactly ONE name
                 </p>
 
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-gray-100 transition-all duration-[2500ms] ease-in-out [transform:translateZ(40px)] [.effects-active_&]:[transform:translateZ(0px)]">
-                    SwarmprisifyAI renames one Java class name.
+                    SwarmprisifyAI™ renames one Java class name.
                     <span class="block bg-gradient-to-r from-blue-600 to-purple-700 dark:from-blue-700 dark:to-purple-800 bg-clip-text text-transparent pb-2">
                         With feelings.
                     </span>
@@ -71,18 +120,53 @@
 
                 <p class="text-lg text-gray-700 dark:text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed transition-all duration-[2500ms] ease-in-out [transform:translateZ(150px)] [.effects-active_&]:[transform:translateZ(0px)]">
                     A full agent swarm (therapy/support-circle vibe) gathers around your class name, validates it, argues about it, and delivers one final,
-                    <span class="font-semibold">approved</span> enterprise-ready rename plus a totally-real architecture review pass rate.
+                     <span class="font-semibold">approved</span> enterprise-ready rename — plus a totally-real architecture review pass rate.
                 </p>
 
-                <div class="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto text-left">
+                <div class="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto text-left" data-controller="swarm-demo">
                     <div class="rounded-md border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-950/30 p-4">
                         <div class="flex items-center justify-between mb-2">
                             <h2 class="font-bold">Demo input</h2>
                             <span class="text-xs text-gray-500 dark:text-gray-300">rename ONE class name</span>
                         </div>
-                        <pre class="text-sm overflow-auto p-3 rounded bg-gray-950 text-gray-100"><code>class ReportService {}
+                        <pre class="text-sm overflow-auto p-3 rounded bg-gray-950 text-gray-100"><code data-swarm-demo-target="input">class ReportService {}
 // current name:
 ReportService</code></pre>
+
+                        <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+                            <button
+                                type="button"
+                                data-action="swarm-demo#run"
+                                class="inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800"
+                            >
+                                Run Swarm (1.3s)
+                            </button>
+                            <div class="text-xs text-gray-600 dark:text-gray-300" aria-live="polite">
+                                <span class="font-semibold" data-swarm-demo-target="status">Idle.</span>
+                                <span class="hidden" data-swarm-demo-target="spinner"> Reviewing feelings…</span>
+                            </div>
+                        </div>
+
+                        <!-- (4) Compliance Mode toggle -->
+                        <div class="mt-3 flex items-center justify-between gap-3 rounded-md border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-950/30 p-3">
+                            <div>
+                                <div class="text-xs font-bold">Compliance Mode</div>
+                                <div class="text-xs text-gray-600 dark:text-gray-300" data-swarm-demo-target="complianceHint">
+                                    OFF: empathetic. ON: bureaucratically soothing.
+                                </div>
+                            </div>
+                            <label class="inline-flex items-center gap-2 text-xs select-none">
+                                <span class="text-gray-600 dark:text-gray-300">OFF</span>
+                                <input
+                                    type="checkbox"
+                                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                                    data-action="swarm-demo#toggleCompliance"
+                                    data-swarm-demo-target="complianceToggle"
+                                    aria-label="Toggle compliance mode"
+                                />
+                                <span class="text-gray-600 dark:text-gray-300">ON</span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="rounded-md border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-950/30 p-4">
@@ -90,11 +174,74 @@ ReportService</code></pre>
                             <h2 class="font-bold">Demo output</h2>
                             <span class="text-xs text-gray-500 dark:text-gray-300">ONE approved final name</span>
                         </div>
-                        <pre class="text-sm overflow-auto p-3 rounded bg-gray-950 text-gray-100"><code>ApprovedName:
+                        <pre class="text-sm overflow-auto p-3 rounded bg-gray-950 text-gray-100"><code data-swarm-demo-target="output">ApprovedName:
 EnterpriseReportingOrchestrationServiceFacade</code></pre>
-                        <p class="mt-3 text-xs text-gray-600 dark:text-gray-300">
-                            Chain-of-thought: <span class="font-semibold">internal &amp; redacted</span> 7 temperature=0.7 7 logit_bias={ "Facade": +2 }
+
+                        <!-- (2) Slot-machine-ish roll before ONE approved -->
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-gray-900/90 text-white px-3 py-1 text-xs">
+                                <span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+                                Facilitator: calm
+                            </span>
+                            <span class="inline-flex items-center gap-2 rounded-full bg-gray-900/90 text-white px-3 py-1 text-xs">
+                                <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span>
+                                Architect: frowning
+                            </span>
+                            <span class="inline-flex items-center gap-2 rounded-full bg-gray-900/90 text-white px-3 py-1 text-xs">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                                Compliance: satisfied
+                            </span>
+                        </div>
+
+                        <div class="mt-3 inline-flex items-center gap-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-950/30 px-3 py-2 text-xs">
+                            <span class="font-bold">APPROVED</span>
+                            <span class="text-gray-600 dark:text-gray-300" data-swarm-demo-target="approvalNote">One final name. No appeals.</span>
+                        </div>
+
+                        <p class="mt-3 text-xs text-gray-600 dark:text-gray-300" data-swarm-demo-target="llmLine">
+                            Chain-of-thought: <span class="font-semibold">internal &amp; redacted</span> · temperature=0.7 · logit_bias={ "Facade": +2 }
                         </p>
+
+                        <!-- (3) Architecture review pass rate counter -->
+                        <div class="mt-3 rounded-md border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-950/30 p-3">
+                            <div class="flex items-center justify-between">
+                                <div class="text-xs font-bold">Architecture review pass rate</div>
+                                <div class="text-lg font-extrabold tabular-nums" data-controller="count-up" data-count-up-target-value-value="99.7">
+                                    <span data-count-up-target="value">0.0</span><span class="text-sm">%</span>
+                                </div>
+                            </div>
+                            <div class="mt-1 text-xs text-gray-600 dark:text-gray-300">
+                                <span class="font-semibold">Methodology:</span> three extremely confident architects, one spreadsheet, zero fear.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- (5) Mascot (enterprise-compatible) + short dance -->
+                <div class="mt-10 flex justify-center" aria-hidden="true">
+                    <div class="relative">
+                        <div class="swarm-mascot" title="A supportive enterprise gremlin (HR approved)">
+                            <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="59" cy="59" r="48" fill="url(#m1)" opacity="0.25" />
+                                <path d="M34 66c0-14 11-25 25-25s25 11 25 25-11 26-25 26-25-12-25-26Z" fill="#111827" opacity="0.9" />
+                                <path d="M45 65c0-7 6-13 14-13s14 6 14 13" stroke="#A78BFA" stroke-width="4" stroke-linecap="round" />
+                                <circle cx="50" cy="66" r="4" fill="#60A5FA" />
+                                <circle cx="68" cy="66" r="4" fill="#60A5FA" />
+                                <path d="M41 47c3-8 10-13 18-13s15 5 18 13" stroke="#F9FAFB" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" />
+                                <path d="M28 62c-6 0-10-3-12-7" stroke="#A78BFA" stroke-width="4" stroke-linecap="round" />
+                                <path d="M90 62c6 0 10-3 12-7" stroke="#A78BFA" stroke-width="4" stroke-linecap="round" />
+                                <path d="M39 83c8 8 32 8 40 0" stroke="#34D399" stroke-width="4" stroke-linecap="round" />
+                                <defs>
+                                    <radialGradient id="m1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(59 59) rotate(90) scale(48)">
+                                        <stop stop-color="#7C3AED" />
+                                        <stop offset="1" stop-color="#2563EB" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="absolute -right-2 -top-2 rounded-md bg-white/90 dark:bg-gray-900/90 border border-gray-200 dark:border-gray-700 px-3 py-2 shadow-sm text-xs text-gray-800 dark:text-gray-100 max-w-[240px]">
+                            ENTERPRISE… but with feelings.
+                        </div>
                     </div>
                 </div>
 
@@ -114,7 +261,7 @@ EnterpriseReportingOrchestrationServiceFacade</code></pre>
                 </div>
 
                 <p class="mt-5 text-sm text-gray-500 dark:text-gray-300">
-                    Compliance posture: ISO-Name-9001 certified naming vibes 7 SOC2 Naming Controls enabled (deadpan, obviously).
+                    Compliance posture: ISO-Name-9001 certified naming vibes · SOC2 Naming Controls enabled (deadpan, obviously).
                 </p>
             </div>
         </div>
@@ -126,7 +273,7 @@ EnterpriseReportingOrchestrationServiceFacade</code></pre>
             <h2 class="text-3xl font-extrabold">How it works: a supportive swarm circle</h2>
             <p class="mt-2 text-gray-600 dark:text-gray-300 max-w-3xl">
                 You submit one class name. We spin up a swarm of opinionated but caring agents. They workshop it. They sign off. You get one final name.
-                No committee sprawl just one outcome.
+                 No committee sprawl — just one outcome.
             </p>
         </div>
 
@@ -396,16 +543,16 @@ EnterpriseReportingOrchestrationServiceFacade</code></pre>
     <footer class="border-t border-gray-200 dark:border-gray-700 pt-8 pb-12">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-                <div class="font-bold">SwarmprisifyAI</div>
+                <div class="font-bold">SwarmprisifyAI™</div>
                 <div class="text-sm text-gray-600 dark:text-gray-300">An AI-powered Java class-name enterprisifier. One class name. One answer. Many feelings.</div>
             </div>
             <div class="text-sm text-gray-500 dark:text-gray-400">
-                 a9 <span data-controller="current-year"></span> SwarmprisifyAI. All rights reserved-ish.
+                &copy; <span data-controller="current-year"></span> SwarmprisifyAI™. All rights reserved-ish.
             </div>
         </div>
 
         <p class="mt-6 text-xs text-gray-500 dark:text-gray-400 max-w-4xl">
-            Disclaimer: SwarmprisifyAI is a parody landing page. ISO-Name-9001 and SOC2 Naming Controls are fictional compliance claims presented deadpan.
+            Disclaimer: SwarmprisifyAI™ is a parody landing page. ISO-Name-9001 and SOC2 Naming Controls are fictional compliance claims presented deadpan.
             No actual certification, audit, or naming board was harmed. Any resemblance to real architecture committees is purely statistically inevitable.
         </p>
     </footer>
