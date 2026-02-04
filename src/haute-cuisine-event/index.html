@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+    <title>Haute Cuisine Event — A Night at Atelier No. 8</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Reserve your seat for an intimate haute-cuisine event: a seasonal tasting menu, wine pairings, and live chef’s table moments. Limited seating."
+    >
+
+    <include src="partials/theme-fouc-guard.html"></include>
+
+    <!-- Link to main CSS will be injected here by HtmlWebpackPlugin -->
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200 overflow-x-hidden">
+
+<div class="container mx-auto px-4 py-8 max-w-5xl">
+
+    <header class="mb-10 flex justify-between items-center">
+        <a href="#top" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Atelier No. 8
+        </a>
+
+        <div class="flex items-center gap-3">
+            <a
+                href="#reserve"
+                class="hidden sm:inline-flex px-4 py-2 font-semibold text-sm text-gray-900 dark:text-gray-100 bg-white/70 dark:bg-gray-900/70 rounded-md shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70 hover:bg-white dark:hover:bg-gray-900 transition"
+            >
+                Reserve
+            </a>
+
+            <!-- Theme Toggle Controller -->
+            <div data-controller="theme">
+                <button
+                    data-theme-target="toggleButton"
+                    data-action="click->theme#toggle"
+                    class="px-4 py-2 font-semibold text-sm text-white bg-gray-900 rounded-md shadow-sm
+                           opacity-40 hover:opacity-100
+                           hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700
+                           dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-offset-gray-950
+                           cursor-pointer transition-opacity duration-200 ease-in-out"
+                >
+                    <!-- Text set by controller -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- Hero / Invitation -->
+        <section class="relative mb-12">
+            <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200/70 dark:ring-gray-800/60">
+                <div class="relative">
+                    <img
+                        src="../static/images/charlesdeluvio-Lks7vei-eAg-unsplash_1920x1280.jpg"
+                        alt="Warmly lit fine-dining table setting with glasses and cutlery."
+                        class="w-full h-[420px] md:h-[520px] object-cover"
+                        loading="eager"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10"></div>
+                </div>
+
+                <div class="-mt-24 md:-mt-28 relative px-6 pb-8">
+                    <div class="max-w-3xl">
+                        <p class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80">
+                            <span class="inline-block w-2 h-2 rounded-full bg-amber-300"></span>
+                            One-night event • limited seating
+                        </p>
+
+                        <h1 class="mt-3 text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                            A Night of Haute Cuisine.
+                            <span class="block text-white/90">Eight courses. One table. Pure theatre.</span>
+                        </h1>
+
+                        <p class="mt-5 text-lg md:text-xl text-white/85 leading-relaxed">
+                            Join us for an intimate chef’s-table experience featuring a seasonal tasting menu, curated pairings,
+                            and live finishing touches served moments from the pass.
+                        </p>
+
+                        <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
+                            <a
+                                href="#reserve"
+                                class="inline-flex justify-center px-8 py-4 font-bold text-lg text-gray-950 bg-amber-300 hover:bg-amber-200 rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-200 dark:focus:ring-offset-gray-950 transition"
+                            >
+                                Reserve your seat
+                            </a>
+
+                            <a
+                                href="#menu"
+                                class="inline-flex justify-center px-8 py-4 font-bold text-lg text-white bg-white/10 hover:bg-white/15 rounded-md shadow-lg ring-1 ring-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/40 dark:focus:ring-offset-gray-950 transition"
+                            >
+                                Preview the menu
+                            </a>
+                        </div>
+
+                        <dl class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="rounded-lg bg-white/10 ring-1 ring-white/15 px-4 py-3">
+                                <dt class="text-xs uppercase tracking-wider text-white/70">Date</dt>
+                                <dd class="mt-1 text-base font-semibold text-white">Sat, 21 Sept • 7:00 PM</dd>
+                            </div>
+                            <div class="rounded-lg bg-white/10 ring-1 ring-white/15 px-4 py-3">
+                                <dt class="text-xs uppercase tracking-wider text-white/70">Location</dt>
+                                <dd class="mt-1 text-base font-semibold text-white">Atelier No. 8, River District</dd>
+                            </div>
+                            <div class="rounded-lg bg-white/10 ring-1 ring-white/15 px-4 py-3">
+                                <dt class="text-xs uppercase tracking-wider text-white/70">Seats</dt>
+                                <dd class="mt-1 text-base font-semibold text-white">Only 24 guests</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social proof / highlights -->
+        <section class="mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                <p class="text-sm text-gray-600 dark:text-gray-300">A tasting built around</p>
+                <p class="mt-2 text-2xl font-bold">Peak-season produce</p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Sourced from nearby farms and the morning market.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                <p class="text-sm text-gray-600 dark:text-gray-300">Pairings by</p>
+                <p class="mt-2 text-2xl font-bold">Our sommelier</p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Optional wine flight or zero-proof pairing included.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                <p class="text-sm text-gray-600 dark:text-gray-300">An evening of</p>
+                <p class="mt-2 text-2xl font-bold">Chef’s-table moments</p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Plating, finishing, and stories behind each course.</p>
+            </div>
+        </section>
+
+        <!-- Menu preview -->
+        <section id="menu" class="mb-16">
+            <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Menu preview</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-300 max-w-xl">
+                    A seasonal composition. Courses may evolve with the market—this is the current inspiration.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">1–2. Amuse & oyster</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Citrus beurre blanc, sea herbs, cucumber pearl.
+                    </p>
+                </article>
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">3. Garden composition</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Charred leek, smoked hazelnut, herb vinaigrette.
+                    </p>
+                </article>
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">4. Hand-cut pasta</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Lobster bisque reduction, tarragon, lemon zest.
+                    </p>
+                </article>
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">5. Fish course</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Crispy skin, saffron fumet, confit fennel.
+                    </p>
+                </article>
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">6. Main</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Dry-aged duck, cherry glaze, roasted celeriac.
+                    </p>
+                </article>
+                <article class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <h3 class="text-xl font-semibold">7–8. Dessert & petit fours</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                        Burnt honey, vanilla, cacao nib, seasonal fruit.
+                    </p>
+                </article>
+            </div>
+
+            <p class="mt-6 text-xs text-gray-500 dark:text-gray-400">
+                Dietary accommodations available with advance notice (vegetarian, pescatarian, gluten-free). Kindly mention this in your reservation message.
+            </p>
+        </section>
+
+        <!-- Experience section -->
+        <section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">What the evening feels like</h2>
+                <p class="mt-4 text-gray-700 dark:text-gray-200 leading-relaxed">
+                    Soft light, polished service, and a menu that progresses like a story.
+                    Expect playful technique, restrained luxury, and a dining room that stays quietly focused—so every note lands.
+                </p>
+
+                <ul class="mt-6 space-y-3 text-sm text-gray-700 dark:text-gray-200">
+                    <li class="flex gap-3">
+                        <span class="mt-1 inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span><span class="font-semibold">Chef introductions</span> and course narratives between seatings.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="mt-1 inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span><span class="font-semibold">Pairing guidance</span> for each course (wine or zero-proof).</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="mt-1 inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span><span class="font-semibold">A keepsake menu</span> to take home, signed by the kitchen.</span>
+                    </li>
+                </ul>
+
+                <div class="mt-8 p-5 rounded-lg bg-amber-50 dark:bg-amber-950/30 ring-1 ring-amber-200/60 dark:ring-amber-900/40">
+                    <p class="text-sm text-amber-950 dark:text-amber-100">
+                        <span class="font-semibold">Dress code:</span> elegant casual.
+                        <span class="font-semibold">Duration:</span> ~2.5 hours.
+                        <span class="font-semibold">Price:</span> $220 tasting (pairings optional).
+                    </p>
+                </div>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                <img
+                    src="../static/images/headway-5QgIuuBxKwM-unsplash_1920x1280.jpg"
+                    alt="Close-up of hands finishing a dish and placing details with precision."
+                    class="w-full h-[380px] md:h-[520px] object-cover"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section id="reserve" class="mb-16">
+            <div class="p-8 md:p-10 rounded-2xl bg-gray-900 text-white shadow-lg relative overflow-hidden">
+                <div class="absolute inset-0 opacity-25 bg-gradient-to-br from-amber-300 via-white/10 to-transparent"></div>
+                <div class="relative">
+                    <h2 class="text-3xl md:text-4xl font-extrabold">Reserve your seat</h2>
+                    <p class="mt-3 text-white/80 max-w-2xl">
+                        This is a limited-seating event. Send us your details and preferred pairing,
+                        and our team will confirm availability by email.
+                    </p>
+
+                    <form class="mt-8 grid grid-cols-1 md:grid-cols-6 gap-3" aria-label="Reservation request form">
+                        <label class="md:col-span-2">
+                            <span class="sr-only">Name</span>
+                            <input
+                                type="text"
+                                name="name"
+                                autocomplete="name"
+                                placeholder="Name"
+                                class="w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder:text-gray-500 border border-white/60 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                required
+                            >
+                        </label>
+
+                        <label class="md:col-span-2">
+                            <span class="sr-only">Email</span>
+                            <input
+                                type="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="Email"
+                                class="w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder:text-gray-500 border border-white/60 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                required
+                            >
+                        </label>
+
+                        <label class="md:col-span-1">
+                            <span class="sr-only">Guests</span>
+                            <select
+                                name="guests"
+                                class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-white/60 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                required
+                            >
+                                <option value="1">1 guest</option>
+                                <option value="2" selected>2 guests</option>
+                                <option value="3">3 guests</option>
+                                <option value="4">4 guests</option>
+                            </select>
+                        </label>
+
+                        <button
+                            type="submit"
+                            class="md:col-span-1 px-6 py-3 font-bold rounded-md bg-amber-300 text-gray-950 hover:bg-amber-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-200 focus:ring-offset-gray-900 transition"
+                        >
+                            Request
+                        </button>
+
+                        <label class="md:col-span-6">
+                            <span class="sr-only">Message</span>
+                            <textarea
+                                name="message"
+                                rows="3"
+                                placeholder="Any dietary notes? Pairing preference (wine / zero-proof)?"
+                                class="w-full mt-2 px-4 py-3 rounded-md bg-white text-gray-900 placeholder:text-gray-500 border border-white/60 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                            ></textarea>
+                        </label>
+                    </form>
+
+                    <p class="mt-4 text-xs text-white/70">
+                        This form is a request only (no payment). We’ll confirm by email with final details.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">FAQ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <details class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <summary class="font-semibold cursor-pointer">Can I attend solo?</summary>
+                    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                        Absolutely. We’ll seat you comfortably—many guests enjoy the chef’s-table format on their own.
+                    </p>
+                </details>
+
+                <details class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <summary class="font-semibold cursor-pointer">Is there a vegetarian option?</summary>
+                    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                        Yes. Tell us in advance and we’ll tailor the tasting while preserving the structure of the menu.
+                    </p>
+                </details>
+
+                <details class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <summary class="font-semibold cursor-pointer">Do you accommodate allergies?</summary>
+                    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                        We’ll do our best with advance notice. If you have severe allergies, include details so we can confirm feasibility.
+                    </p>
+                </details>
+
+                <details class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-800/70">
+                    <summary class="font-semibold cursor-pointer">What about cancellations?</summary>
+                    <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                        If plans change, let us know as early as possible—seating is limited and we keep a waitlist.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pt-8 pb-10 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+            <p>© <span id="year">2026</span> Atelier No. 8. All rights reserved.</p>
+            <p class="text-gray-500 dark:text-gray-400">
+                Questions? <a class="underline hover:no-underline" href="mailto:events@atelierno8.example">events@atelierno8.example</a>
+            </p>
+        </div>
+
+        <script>
+            document.getElementById('year').textContent = String(new Date().getFullYear());
+        </script>
+    </footer>
+
+</div>
+
+</body>
+</html>
