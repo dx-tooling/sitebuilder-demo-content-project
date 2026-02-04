@@ -51,5 +51,3 @@ export default class CountUpController extends Controller {
         requestAnimationFrame(step);
     }
 }
-
-Error: File does not exist: /workspace/src/controllers/count_up_controller.ts

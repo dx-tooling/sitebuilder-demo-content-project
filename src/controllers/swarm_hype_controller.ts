@@ -45,9 +45,7 @@ export default class SwarmHypeController extends Controller {
             "Synergy",
         ];
 
-        const chosen = finalName?.includes("ComplianceAdapter")
-            ? [...tokens, "Control", "Audit", "Policy"]
-            : tokens;
+        const chosen = finalName?.includes("ComplianceAdapter") ? [...tokens, "Control", "Audit", "Policy"] : tokens;
 
         const count = 18;
         const bits: ConfettiToken[] = [];
@@ -101,5 +99,3 @@ export default class SwarmHypeController extends Controller {
         requestAnimationFrame(tick);
     }
 }
-
-Error: File does not exist: /workspace/src/controllers/swarm_hype_controller.ts

@@ -5,5 +5,3 @@ export default class CurrentYearController extends Controller {
         this.element.textContent = String(new Date().getFullYear());
     }
 }
-
-Error: File does not exist: /workspace/src/controllers/current_year_controller.ts

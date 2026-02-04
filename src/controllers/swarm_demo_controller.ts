@@ -51,9 +51,7 @@ export default class SwarmDemoController extends Controller {
         this.outputTarget.classList.remove("swarm-approved");
 
         const complianceOn = this.complianceToggleTarget.checked;
-        this.statusTarget.textContent = complianceOn
-            ? "Submitting Form N-AME/9001-B…"
-            : "Spinning up the swarm…";
+        this.statusTarget.textContent = complianceOn ? "Submitting Form N-AME/9001-B…" : "Spinning up the swarm…";
         this.spinnerTarget.classList.remove("hidden");
 
         const roll = (name: string) => {
@@ -61,9 +59,7 @@ export default class SwarmDemoController extends Controller {
         };
 
         // Slot-machine-ish roll through candidates
-        const rollNames = complianceOn
-            ? this.candidates.map((c) => `${c}ComplianceAdapter`)
-            : this.candidates;
+        const rollNames = complianceOn ? this.candidates.map((c) => `${c}ComplianceAdapter`) : this.candidates;
 
         roll(rollNames[0]);
 
@@ -93,8 +89,8 @@ export default class SwarmDemoController extends Controller {
                     : "One final name. No appeals.";
 
                 this.llmLineTarget.innerHTML = complianceOn
-                    ? "Chain-of-thought: <span class=\"font-semibold\">internal &amp; redacted</span> · temperature=0.7 · logit_bias={ \"Facade\": +2, \"ComplianceAdapter\": +9 }"
-                    : "Chain-of-thought: <span class=\"font-semibold\">internal &amp; redacted</span> · temperature=0.7 · logit_bias={ \"Facade\": +2 }";
+                    ? 'Chain-of-thought: <span class="font-semibold">internal &amp; redacted</span> · temperature=0.7 · logit_bias={ "Facade": +2, "ComplianceAdapter": +9 }'
+                    : 'Chain-of-thought: <span class="font-semibold">internal &amp; redacted</span> · temperature=0.7 · logit_bias={ "Facade": +2 }';
 
                 // Trigger naming confetti
                 this.element.dispatchEvent(
@@ -122,5 +118,3 @@ export default class SwarmDemoController extends Controller {
         this.isRunning = false;
     }
 }
-
-Error: File does not exist: /workspace/src/controllers/swarm_demo_controller.ts
