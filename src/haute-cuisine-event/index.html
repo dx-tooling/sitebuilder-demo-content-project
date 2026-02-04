@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+    <title>Midnight Atelier — Haute-Cuisine Guest Chef Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="A one-night haute-cuisine guest chef experience: 8 courses, wine pairings, live kitchen counter seating, and limited reservations."
+    >
+
+    <!-- Include FOUC guard script -->
+    <include src="partials/theme-fouc-guard.html"></include>
+
+    <!-- Link to CSS will be injected here by HtmlWebpackPlugin -->
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200 overflow-x-hidden">
+
+<div class="container mx-auto px-4 py-8 max-w-6xl">
+
+    <header class="mb-10 flex justify-between items-center">
+        <a href="#top" class="group inline-flex items-center gap-2" aria-label="Midnight Atelier">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-sm">
+                <span class="font-extrabold tracking-tight">MA</span>
+            </span>
+            <span class="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
+                Midnight Atelier
+            </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a class="text-gray-700 dark:text-gray-200 hover:underline" href="#experience">Experience</a>
+            <a class="text-gray-700 dark:text-gray-200 hover:underline" href="#menu">Menu</a>
+            <a class="text-gray-700 dark:text-gray-200 hover:underline" href="#details">Details</a>
+            <a class="text-gray-700 dark:text-gray-200 hover:underline" href="#reserve">Reserve</a>
+        </nav>
+
+        <!-- Theme Toggle Controller -->
+        <div data-controller="theme" class="shrink-0">
+            <button
+                data-theme-target="toggleButton"
+                data-action="click->theme#toggle"
+                class="px-4 py-2 font-semibold text-sm text-white bg-purple-600 rounded-md shadow-sm
+                       opacity-40 hover:opacity-100
+                       hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500
+                       dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-offset-gray-800
+                       cursor-pointer transition-opacity duration-200 ease-in-out"
+            >
+                <!-- Text set by controller -->
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO (effects) -->
+    <section id="top" class="relative mb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+
+            <div
+                class="relative lg:col-span-3 effects-container"
+                data-controller="hero-effects"
+                style="perspective: 1000px;"
+            >
+                <div
+                    class="relative z-10 py-14 px-6 md:px-10 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-sm
+                           transition-transform duration-[3000ms] ease-in-out
+                           transform rotate-x-[60deg] origin-top
+                           [.effects-active_&]:[transform:scale(1.02)_rotateX(0deg)]"
+                    style="transform-style: preserve-3d;"
+                >
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-5">
+                        <span class="inline-flex items-center rounded-full border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-gray-950/30 px-3 py-1 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                            One-night event
+                        </span>
+                        <span class="inline-flex items-center rounded-full border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-gray-950/30 px-3 py-1 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                            8-course tasting
+                        </span>
+                        <span class="inline-flex items-center rounded-full border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-gray-950/30 px-3 py-1 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                            Limited seats
+                        </span>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-2 bg-gradient-to-r from-blue-600 to-purple-700 dark:from-blue-700 dark:to-purple-800 bg-clip-text text-transparent pb-2 text-center lg:text-left">
+                        Midnight Atelier presents:
+                    </h2>
+
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 dark:text-gray-100 leading-tight text-center lg:text-left
+                               transition-all duration-[2500ms] ease-in-out
+                               [transform:translateZ(40px)]
+                               [.effects-active_&]:[transform:translateZ(0px)]
+                               [.effects-active_&]:[filter:drop-shadow(0_10px_8px_rgb(0_0_0_/_0.18))]
+                               dark:[.effects-active_&]:[filter:drop-shadow(0_14px_10px_rgb(0_0_0_/_0.35))]"
+                    >
+                        A Haute-Cuisine Guest Chef Evening
+                    </h1>
+
+                    <p
+                        class="text-lg text-gray-700 dark:text-gray-100 mb-8 max-w-2xl leading-relaxed mx-auto lg:mx-0 text-center lg:text-left
+                               transition-all duration-[2500ms] ease-in-out
+                               [transform:translateZ(150px)]
+                               [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        Eight courses inspired by coastal terroir, finished tableside. Pairings curated by our sommelier.
+                        Counter seating meets candlelit dining—made for those who collect memorable nights.
+                    </p>
+
+                    <div
+                        class="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start
+                               transition-all duration-[2500ms] ease-in-out
+                               [transform:translateZ(80px)]
+                               [.effects-active_&]:[transform:translateZ(0px)]"
+                    >
+                        <a
+                            href="#reserve"
+                            class="inline-block px-8 py-4 font-bold text-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-md shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 cursor-pointer"
+                        >
+                            Reserve seats
+                        </a>
+                        <a
+                            href="#menu"
+                            class="inline-block px-8 py-4 font-bold text-lg text-gray-900 bg-white/80 hover:bg-white rounded-md shadow-sm border border-gray-200
+                                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800
+                                   dark:bg-gray-800/60 dark:hover:bg-gray-800 dark:text-gray-100 dark:border-gray-700 cursor-pointer"
+                        >
+                            View the menu
+                        </a>
+                    </div>
+
+                    <p
+                        class="text-sm text-gray-600 dark:text-gray-200 mt-5 text-center lg:text-left
+                               transition-all duration-[2500ms] ease-in-out
+                               [transform:translateY(100px)]
+                               [.effects-active_&]:[transform:translateY(0px)]"
+                    >
+                        Friday, 24 May • Doors 18:30 • Seating 19:00 • Midtown.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800">
+                    <img
+                        src="../static/images/headway-5QgIuuBxKwM-unsplash_1920x1280.jpg"
+                        alt="Candlelit table setting with glassware and warm reflections."
+                        class="w-full h-[280px] md:h-[340px] lg:h-[420px] object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">The Atelier Counter</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            A front-row view into the kitchen—precision plating, finishing sauces, and a quiet conversation with the team.
+                            Choose counter seating for the full choreography.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">An evening designed like a menu</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <svg class="mx-auto h-12 w-12 text-green-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75V3m0 3.75a3 3 0 0 0 3 3h3m-6-6a3 3 0 0 1-3 3H6m6 3.75v7.5m0 0H9.75m2.25 0h2.25" />
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Seasonal craft</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Ingredients sourced within 200 km, composed into modern classics with a whisper of smoke and citrus.
+                </p>
+            </div>
+            <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <svg class="mx-auto h-12 w-12 text-blue-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5 2.245 5 5 0 2.166-1.39 4.014-3.327 4.713L13 21h-2l-.673-8.287C8.39 12.014 7 10.166 7 8c0-2.755 2.245-5 5-5Z" />
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Sommelier pairings</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Optional pairing flight that moves from mineral whites to velvet reds—and a final aromatic surprise.
+                </p>
+            </div>
+            <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <svg class="mx-auto h-12 w-12 text-purple-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7.5h8m-8 4h8m-8 4h5M5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v10.5A2.25 2.25 0 0 1 18.75 19.5H5.25A2.25 2.25 0 0 1 3 17.25V6.75A2.25 2.25 0 0 1 5.25 4.5Z" />
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Chef’s narration</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Short stories between courses: technique, origin, and the idea behind each plate—without breaking the mood.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-200">Tasting menu (8 courses)</h2>
+                <p class="text-gray-700 dark:text-gray-400 leading-relaxed mb-6">
+                    A modern dégustation with vegetarian-friendly options on request. Allergies accommodated when noted at reservation.
+                </p>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <div class="p-6">
+                        <ol class="space-y-4">
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">1</span>
+                                <div>
+                                    <p class="font-semibold">Amuse: oyster leaf & green apple</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Cold smoke, sea herbs, citrus pearl.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">2</span>
+                                <div>
+                                    <p class="font-semibold">Aged beef tartare</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Truffle emulsion, caper dust, grilled brioche.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">3</span>
+                                <div>
+                                    <p class="font-semibold">Asparagus in brown butter dashi</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Fermented lemon, toasted hazelnut.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">4</span>
+                                <div>
+                                    <p class="font-semibold">Langoustine, saffron nage</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Fennel confit, coral oil.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">5</span>
+                                <div>
+                                    <p class="font-semibold">Turbot & embered leek</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Champagne beurre blanc, dill blossom.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">6</span>
+                                <div>
+                                    <p class="font-semibold">Duck, black garlic lacquer</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Charred carrot, jus reduction, cherry.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">7</span>
+                                <div>
+                                    <p class="font-semibold">Pre-dessert: cucumber & verbena</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Icy granité, white tea.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-xs font-bold">8</span>
+                                <div>
+                                    <p class="font-semibold">Chocolate, rye & salted cream</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Warm souffle, rye crumble, cacao nib.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="px-6 py-5 bg-gray-50 dark:bg-gray-900/30 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            <p class="text-sm text-gray-600 dark:text-gray-300">
+                                Pairing flight available (5 glasses).
+                            </p>
+                            <a class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline" href="#reserve">
+                                Reserve now &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                    <img
+                        src="../static/images/charlesdeluvio-Lks7vei-eAg-unsplash_1920x1280.jpg"
+                        alt="Chef preparing a plate at the pass, focused and precise."
+                        class="w-full h-[260px] md:h-[320px] object-cover"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h3 class="text-xl font-semibold mb-2">Guest chef</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Chef Élise Laurent (Paris / Copenhagen) joins our kitchen for one service.
+                        Expect French technique with Scandinavian restraint—each course built for balance and clarity.
+                    </p>
+                </div>
+
+                <div class="bg-gray-100 dark:bg-gray-800/50 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <blockquote class="italic text-gray-700 dark:text-gray-200 mb-3">
+                        “The finest nights feel effortless—behind the scenes, everything is exact.”
+                    </blockquote>
+                    <p class="font-semibold text-sm">— Midnight Atelier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section id="details" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">Event details</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h3 class="text-lg font-semibold mb-2">Date & timing</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Friday, 24 May<br>
+                    Doors: 18:30 • Seating: 19:00<br>
+                    Approx. duration: 2h 45m
+                </p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h3 class="text-lg font-semibold mb-2">Tickets</h3>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li class="flex items-start gap-2">
+                        <svg class="h-5 w-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        <span>Tasting menu: <span class="font-semibold text-gray-900 dark:text-gray-100">$220</span> per guest</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="h-5 w-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        <span>Pairings (optional): <span class="font-semibold text-gray-900 dark:text-gray-100">$95</span></span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="h-5 w-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        <span>Gratuity included. Tax at checkout.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h3 class="text-lg font-semibold mb-2">Location</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Midnight Atelier<br>
+                    41 Wren Street, Midtown<br>
+                    <a href="#reserve" class="text-blue-600 dark:text-blue-400 hover:underline">Add a note for accessibility needs</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVE -->
+    <section id="reserve" class="mb-8">
+        <div class="py-12 bg-indigo-600 dark:bg-indigo-800 rounded-2xl text-center text-white">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-3xl font-bold mb-3">Reserve your seats</h2>
+                <p class="mb-7 text-indigo-100 dark:text-indigo-200">
+                    This is a limited-seating event. Leave your details and we’ll confirm availability within 24 hours.
+                </p>
+
+                <form class="flex flex-col gap-3 max-w-xl mx-auto text-left">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-indigo-50 mb-1">First name</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                autocomplete="given-name"
+                                class="block w-full px-4 py-3 rounded-md shadow-sm border border-indigo-400/60 focus:ring-white focus:border-white sm:text-sm text-gray-900 bg-white"
+                                placeholder="Amina"
+                            >
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-indigo-50 mb-1">Last name</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                autocomplete="family-name"
+                                class="block w-full px-4 py-3 rounded-md shadow-sm border border-indigo-400/60 focus:ring-white focus:border-white sm:text-sm text-gray-900 bg-white"
+                                placeholder="Keller"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-indigo-50 mb-1">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                class="block w-full px-4 py-3 rounded-md shadow-sm border border-indigo-400/60 focus:ring-white focus:border-white sm:text-sm text-gray-900 bg-white"
+                                placeholder="you@example.com"
+                            >
+                        </div>
+                        <div>
+                            <label for="seats" class="block text-sm font-medium text-indigo-50 mb-1">Seats</label>
+                            <select
+                                id="seats"
+                                name="seats"
+                                class="block w-full px-4 py-3 rounded-md shadow-sm border border-indigo-400/60 focus:ring-white focus:border-white sm:text-sm text-gray-900 bg-white"
+                            >
+                                <option value="2" selected>2 seats</option>
+                                <option value="1">1 seat</option>
+                                <option value="3">3 seats</option>
+                                <option value="4">4 seats</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="notes" class="block text-sm font-medium text-indigo-50 mb-1">Allergies / notes (optional)</label>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="3"
+                            class="block w-full px-4 py-3 rounded-md shadow-sm border border-indigo-400/60 focus:ring-white focus:border-white sm:text-sm text-gray-900 bg-white"
+                            placeholder="Allergy notes, accessibility needs, vegetarian option request, pairing preference..."
+                        ></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 items-center justify-between pt-2">
+                        <button
+                            type="submit"
+                            class="w-full sm:w-auto px-8 py-3 font-semibold text-indigo-700 bg-white rounded-md shadow-md hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-indigo-700 transition duration-150 ease-in-out cursor-pointer"
+                        >
+                            Request reservation
+                        </button>
+                        <p class="text-xs text-indigo-100/90 text-center sm:text-right">
+                            Prefer email? Write to
+                            <a class="font-semibold underline" href="mailto:reservations@midnight-atelier.example">
+                                reservations@midnight-atelier.example
+                            </a>
+                        </p>
+                    </div>
+                </form>
+
+                <p class="text-xs text-indigo-200 dark:text-indigo-300 mt-6">
+                    By requesting a reservation you agree to our cancellation policy (72h). No payment is taken on this form.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div> <!-- End container -->
+
+<footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12 py-8">
+    <div class="container mx-auto px-4 text-center text-sm text-gray-600 dark:text-gray-400">
+        &copy; 2026 Midnight Atelier. All rights reserved.
+        <span class="mx-2">|</span>
+        <a href="#top" class="hover:underline">Back to top</a>
+    </div>
+
+    <div class="container mt-6 mx-auto px-4 text-center text-xs text-gray-500 dark:text-gray-600">
+        Photos by <a class="hover:underline" href="https://unsplash.com/@headwayio">Headway</a> and
+        <a class="hover:underline" href="https://unsplash.com/@charlesdeluvio">charlesdeluvio</a> on Unsplash.
+    </div>
+</footer>
+
+<!-- The script tag will be injected by HtmlWebpackPlugin -->
+</body>
+
+</html>
